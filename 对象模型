@@ -1,0 +1,879 @@
+# OurVerse Core Architecture
+## Part 1：统一对象模型（Universal Object Model）
+
+> 世界不是由页面组成。
+>
+> 世界不是由文件组成。
+>
+> 世界由对象（Object）组成。
+
+---
+
+# 前言
+
+这是整个 OurVerse 技术架构最重要的文档。
+
+如果说：
+
+Design Bible 定义了世界应该是什么样。
+
+那么：
+
+Universal Object Model（统一对象模型）。
+
+定义了：
+
+世界究竟由什么组成。
+
+从这一刻开始：
+
+OurVerse 不再存在：
+
+- Note（笔记）
+- Todo（待办）
+- Photo（照片）
+- Journal（日记）
+- Project（项目）
+- AI Chat（聊天）
+- Bookmark（收藏）
+
+这些都只是：
+
+不同类型的 Object。
+
+整个系统，
+
+最终只认识一种数据。
+
+Object。
+
+---
+
+# 第一原则
+
+## Everything Is An Object.
+
+任何存在于 OurVerse 的东西。
+
+都必须是 Object。
+
+包括：
+
+照片。
+
+视频。
+
+人物。
+
+地点。
+
+事件。
+
+书籍。
+
+网页。
+
+代码。
+
+AI。
+
+项目。
+
+文档。
+
+聊天。
+
+甚至：
+
+Home。
+
+Memory。
+
+Knowledge。
+
+都可以拥有自己的 Object。
+
+统一。
+
+比分类更重要。
+
+---
+
+# 第二原则
+
+## Object 是现实世界的数字映射
+
+现实世界有什么。
+
+Object 就可以表示什么。
+
+例如：
+
+一本书。
+
+```
+Book Object
+```
+
+一个人。
+
+```
+Person Object
+```
+
+一家餐厅。
+
+```
+Place Object
+```
+
+一次旅行。
+
+```
+Trip Object
+```
+
+一段聊天。
+
+```
+Conversation Object
+```
+
+一张照片。
+
+```
+Photo Object
+```
+
+不是因为数据库需要这些类型。
+
+而是因为：
+
+现实世界本来如此。
+
+---
+
+# 第三原则
+
+## Object 永远拥有身份
+
+每一个 Object。
+
+都是独立存在的。
+
+不会依赖：
+
+页面。
+
+文件夹。
+
+模块。
+
+例如：
+
+照片不会属于 Memory。
+
+它只是：
+
+当前在 Memory 被展示。
+
+一本书。
+
+不会属于 Knowledge。
+
+它只是：
+
+Knowledge 引用了它。
+
+因此：
+
+空间（Space）
+
+只是 Object 的观察方式。
+
+不是拥有者。
+
+---
+
+# Universal Object
+
+所有 Object 都遵循统一结构。
+
+```
+Object
+
+├── ID
+├── Type
+├── Title
+├── Content
+├── Metadata
+├── Relations
+├── Timeline
+├── Assets
+├── AI Memory
+├── Permissions
+└── Status
+```
+
+所有对象。
+
+都必须拥有这些能力。
+
+只是有些字段为空。
+
+---
+
+# Object ID
+
+ID 永远不可变。
+
+例如：
+
+```
+obj_01HZYX7A2P5...
+
+```
+
+要求：
+
+全局唯一。
+
+不可重复。
+
+不可修改。
+
+永久存在。
+
+Object 可以改名。
+
+ID 永远不会改变。
+
+---
+
+# Object Type
+
+Type 只回答：
+
+它是什么。
+
+例如：
+
+```
+person
+
+place
+
+event
+
+note
+
+document
+
+photo
+
+book
+
+movie
+
+music
+
+conversation
+
+project
+
+task
+
+journal
+
+website
+
+code
+
+ai_agent
+
+collection
+```
+
+未来可以继续扩展。
+
+Type 不影响底层结构。
+
+只影响表现方式。
+
+---
+
+# Object Title
+
+所有 Object 都拥有标题。
+
+例如：
+
+人物：
+
+张三
+
+照片：
+
+北海道旅行
+
+书：
+
+《设计中的设计》
+
+项目：
+
+OurVerse
+
+如果没有标题。
+
+系统自动生成。
+
+例如：
+
+```
+Untitled Photo
+
+Untitled Note
+```
+
+---
+
+# Content
+
+真正的数据。
+
+例如：
+
+Markdown。
+
+图片。
+
+视频。
+
+PDF。
+
+JSON。
+
+音频。
+
+代码。
+
+不同 Type。
+
+Content 不同。
+
+Object 结构一致。
+
+---
+
+# Metadata
+
+Metadata 不属于内容。
+
+而属于描述。
+
+例如：
+
+创建时间。
+
+修改时间。
+
+拍摄地点。
+
+作者。
+
+来源。
+
+标签。
+
+设备。
+
+颜色。
+
+文件大小。
+
+AI 摘要。
+
+……
+
+Metadata 无限扩展。
+
+不会污染 Content。
+
+---
+
+# Relations
+
+这是整个 OurVerse 的核心。
+
+Object 不应该孤立。
+
+例如：
+
+```
+Photo
+
+↓
+
+Trip
+
+↓
+
+Place
+
+↓
+
+Person
+
+↓
+
+Journal
+```
+
+每个 Object。
+
+可以连接：
+
+无限 Object。
+
+因此。
+
+整个数据库：
+
+不是 Tree。
+
+而是 Graph。
+
+---
+
+# Timeline
+
+所有 Object。
+
+都会进入时间轴。
+
+包括：
+
+创建。
+
+修改。
+
+查看。
+
+分享。
+
+归档。
+
+AI 理解。
+
+Timeline：
+
+不是日志。
+
+而是人生历史。
+
+---
+
+# Assets
+
+Object 可以拥有资源。
+
+例如：
+
+图片。
+
+封面。
+
+附件。
+
+缩略图。
+
+语音。
+
+视频。
+
+3D。
+
+未来：
+
+甚至可以拥有：
+
+数字资产。
+
+AI 模型。
+
+Agent。
+
+---
+
+# AI Memory
+
+这是传统软件没有的能力。
+
+每个 Object。
+
+都会拥有：
+
+自己的 AI 理解。
+
+例如：
+
+AI 自动生成：
+
+摘要。
+
+关键词。
+
+主题。
+
+情绪。
+
+人物。
+
+地点。
+
+引用。
+
+相似内容。
+
+未来：
+
+AI 理解，
+
+成为 Object 的一部分。
+
+而不是外挂。
+
+---
+
+# Permissions
+
+Object 可以拥有权限。
+
+例如：
+
+Private
+
+Family
+
+Friends
+
+Team
+
+Public
+
+默认：
+
+Private。
+
+隐私不是设置。
+
+隐私是默认。
+
+---
+
+# Status
+
+Object 拥有生命周期。
+
+例如：
+
+Draft
+
+Active
+
+Archived
+
+Deleted
+
+Future
+
+整个世界。
+
+永远不会真正删除。
+
+只是：
+
+生命周期变化。
+
+---
+
+# Object 生命周期
+
+```
+Create
+
+↓
+
+Understand（AI）
+
+↓
+
+Connect
+
+↓
+
+Grow
+
+↓
+
+Archive
+
+↓
+
+Rediscover
+```
+
+这里没有：
+
+End。
+
+因为：
+
+人生不会结束。
+
+只是：
+
+重新发现。
+
+---
+
+# Object 不属于 App
+
+例如：
+
+一个 Project。
+
+可以：
+
+出现在：
+
+Home。
+
+Knowledge。
+
+Creation。
+
+Universe。
+
+Project 没有复制。
+
+只是：
+
+不同空间，
+
+展示同一个 Object。
+
+这就是：
+
+Single Source of Truth。
+
+---
+
+# Object 与 Space
+
+关系如下：
+
+```
+Space
+
+↓
+
+View
+
+↓
+
+Object
+```
+
+Space：
+
+决定：
+
+如何看。
+
+Object：
+
+决定：
+
+是什么。
+
+因此：
+
+改变 Space。
+
+不会改变 Object。
+
+---
+
+# Object 与 AI
+
+传统 AI：
+
+```
+用户
+
+↓
+
+提问
+
+↓
+
+回答
+```
+
+OurVerse：
+
+```
+Object
+
+↓
+
+AI 理解
+
+↓
+
+建立关系
+
+↓
+
+持续成长
+```
+
+AI 不是：
+
+回答问题。
+
+AI 是：
+
+理解世界。
+
+---
+
+# Object Graph
+
+```
+Person
+
+├── Photo
+
+├── Journal
+
+├── Project
+
+├── Conversation
+
+├── Book
+
+└── Event
+```
+
+任何 Object。
+
+都可以无限连接。
+
+最终形成：
+
+Universe Graph。
+
+---
+
+# Object Schema（概念）
+
+```
+Object
+
+ID
+
+Type
+
+Content
+
+Metadata
+
+Relations
+
+Assets
+
+Timeline
+
+AI
+
+Permission
+
+Status
+```
+
+以后：
+
+数据库。
+
+API。
+
+前端。
+
+AI。
+
+同步。
+
+全部围绕这一 Schema 建立。
+
+---
+
+# 核心原则
+
+新增任何功能之前。
+
+必须先问：
+
+它是不是 Object？
+
+如果不是。
+
+不要开发。
+
+重新设计。
+
+---
+
+# Universal Object Model 信条
+
+✓ 一切都是 Object。
+
+✓ Object 独立存在。
+
+✓ Object 可以无限连接。
+
+✓ Object 不属于页面。
+
+✓ Space 决定观察方式。
+
+✓ AI 持续理解 Object。
+
+✓ 时间记录 Object。
+
+✓ Graph 连接 Object。
+
+✓ Object 永远成长。
+
+✓ 世界由 Object 构成。
+
+---
+
+# Part 1 完
+
+下一章节：
+
+## Part 2：Relationship Graph（关系图模型）
+
+我们将定义：
+
+- 关系（Relation）的统一模型
+- 边（Edge）如何设计
+- 权重（Weight）
+- 双向关系与单向关系
+- 语义关系（Semantic Relation）
+- AI 自动建立关系
+- Graph Query
+- Graph Index
+- 为什么整个 OurVerse 最终会演化成一个 Living Knowledge Graph（活的知识宇宙）
