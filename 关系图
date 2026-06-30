@@ -1,0 +1,777 @@
+# OurVerse Core Architecture
+## Part 2：关系图模型（Relationship Graph）
+
+> 一个对象没有意义。
+>
+> 两个对象之间的关系，才开始产生意义。
+>
+> 当整个世界连接起来，知识便开始生长。
+
+---
+
+# 前言
+
+在传统的软件里，数据是独立的。
+
+一张照片就是一张照片。
+
+一篇笔记就是一篇笔记。
+
+一个联系人就是一个联系人。
+
+它们之间几乎没有联系。
+
+即使有，也只是：
+
+- 文件夹
+- 标签
+- 引用
+- 超链接
+
+这些关系都是人为建立的。
+
+OurVerse 不一样。
+
+**Object 负责记录世界。**
+
+**Relationship 负责理解世界。**
+
+Object 是点（Node）。
+
+Relationship 是边（Edge）。
+
+Universe，正是由无数 Node 与 Edge 共同组成。
+
+---
+
+# 第一原则
+
+## 世界不是树，而是网络
+
+过去几十年，大多数软件都采用树形结构。
+
+```
+我的文档
+ ├── 工作
+ │   ├── 项目A
+ │   └── 项目B
+ └── 生活
+     ├── 日记
+     └── 相册
+```
+
+树形结构简单。
+
+但它并不符合真实世界。
+
+一本书：
+
+既属于设计。
+
+也属于创业。
+
+还属于某一个项目。
+
+甚至影响了某一次旅行。
+
+现实世界没有唯一父节点。
+
+因此：
+
+OurVerse 不采用 Tree。
+
+采用 Graph。
+
+---
+
+# 第二原则
+
+## Relationship 是一等公民
+
+传统系统：
+
+Object 是核心。
+
+Relationship 是附属。
+
+OurVerse：
+
+Relationship 与 Object 同样重要。
+
+因为：
+
+世界不是由事物组成。
+
+而是由关系组成。
+
+---
+
+# Relationship 定义
+
+任何两个 Object。
+
+都可以建立一种关系。
+
+例如：
+
+```
+Person
+
+↓
+
+visited
+
+↓
+
+Place
+```
+
+```
+Book
+
+↓
+
+inspires
+
+↓
+
+Project
+```
+
+```
+Photo
+
+↓
+
+belongs_to
+
+↓
+
+Trip
+```
+
+```
+Journal
+
+↓
+
+mentions
+
+↓
+
+Person
+```
+
+关系不仅表示连接。
+
+更表示语义。
+
+---
+
+# Edge
+
+Relationship 本质上是一条 Edge。
+
+```
+Object A
+
+↓
+
+Edge
+
+↓
+
+Object B
+```
+
+Edge 本身也是数据。
+
+不是一个简单的 ID。
+
+---
+
+# Edge 结构
+
+每一条 Edge 都拥有：
+
+```
+Edge
+
+ID
+
+From
+
+To
+
+Type
+
+Weight
+
+Confidence
+
+Direction
+
+Created At
+
+Created By
+
+Metadata
+```
+
+因此。
+
+Edge 本身也可以被理解。
+
+---
+
+# Relation Type
+
+统一关系类型。
+
+例如：
+
+## belongs_to
+
+属于。
+
+---
+
+## contains
+
+包含。
+
+---
+
+## created_by
+
+创建者。
+
+---
+
+## mentions
+
+提到。
+
+---
+
+## located_in
+
+位于。
+
+---
+
+## related_to
+
+相关。
+
+---
+
+## references
+
+引用。
+
+---
+
+## inspired_by
+
+受到启发。
+
+---
+
+## generated_from
+
+由……生成。
+
+---
+
+## uses
+
+使用。
+
+---
+
+## linked_with
+
+关联。
+
+---
+
+未来。
+
+Type 可以扩展。
+
+但必须保持统一语义。
+
+---
+
+# Direction
+
+有些关系。
+
+天然单向。
+
+例如：
+
+```
+Photo
+
+↓
+
+taken_at
+
+↓
+
+Place
+```
+
+而有些关系。
+
+天然双向。
+
+例如：
+
+```
+Person
+
+↔
+
+Person
+```
+
+Relationship 必须明确方向。
+
+AI 才能正确推理。
+
+---
+
+# Weight（关系强度）
+
+不是所有关系都一样。
+
+例如：
+
+每天联系的人。
+
+应该比：
+
+十年前见过一次的人。
+
+关系更强。
+
+因此：
+
+每条 Edge 都拥有：
+
+Weight。
+
+例如：
+
+```
+0.1
+
+0.5
+
+0.9
+```
+
+Weight 会不断变化。
+
+而不是固定。
+
+---
+
+# Confidence（可信度）
+
+关系来源不同。
+
+可信度不同。
+
+例如：
+
+用户手动建立：
+
+100%。
+
+AI 猜测：
+
+75%。
+
+OCR：
+
+82%。
+
+语音识别：
+
+68%。
+
+因此：
+
+AI 永远知道：
+
+哪些关系需要确认。
+
+哪些已经确定。
+
+---
+
+# Metadata
+
+Relationship 也拥有自己的信息。
+
+例如：
+
+建立时间。
+
+来源。
+
+标签。
+
+AI 推断原因。
+
+备注。
+
+等等。
+
+Edge 也是一个完整对象。
+
+---
+
+# AI 自动建立关系
+
+未来。
+
+AI 会持续观察 Object。
+
+例如：
+
+上传一张旅行照片。
+
+AI 自动发现：
+
+人物。
+
+地点。
+
+时间。
+
+天气。
+
+相机。
+
+旅行。
+
+酒店。
+
+交通。
+
+并自动建立：
+
+几十条 Relationship。
+
+用户无需整理。
+
+世界自己成长。
+
+---
+
+# Living Graph（活图）
+
+传统数据库：
+
+数据不会自己变化。
+
+OurVerse：
+
+Graph 会持续成长。
+
+例如：
+
+今天新增一本书。
+
+AI 发现：
+
+它影响了三个项目。
+
+关联五篇笔记。
+
+涉及两个朋友。
+
+Graph 自动更新。
+
+整个世界：
+
+越来越完整。
+
+---
+
+# Temporal Relationship（时间关系）
+
+Relationship 也会变化。
+
+例如：
+
+```
+Worked With
+
+2019~2021
+```
+
+```
+Lives In
+
+2022~
+```
+
+```
+Visited
+
+2024-10-03
+```
+
+时间，
+
+不仅属于 Object。
+
+也属于 Edge。
+
+---
+
+# Semantic Graph
+
+Graph 不只是连接。
+
+更理解语义。
+
+例如：
+
+```
+Steve Jobs
+
+↓
+
+founded
+
+↓
+
+Apple
+```
+
+而不是：
+
+```
+Object A
+
+↓
+
+Object B
+```
+
+语义。
+
+决定 AI 的推理能力。
+
+---
+
+# Relationship Network
+
+例如：
+
+```
+北海道旅行
+
+├── 小林
+├── 东京
+├── JR Pass
+├── 富良野
+├── 摄影
+├── 《设计中的设计》
+├── 相机
+├── 花海
+├── 夏天
+└── 日记
+```
+
+这不是数据库。
+
+这是：
+
+人生事件网络。
+
+---
+
+# Graph Query
+
+未来所有搜索。
+
+都基于 Graph。
+
+例如：
+
+"找出所有和日本有关的照片。"
+
+AI 实际查询：
+
+```
+Japan
+
+↓
+
+Place
+
+↓
+
+Trip
+
+↓
+
+Photo
+```
+
+而不是：
+
+关键词。
+
+Graph Search。
+
+将逐步替代：
+
+全文搜索。
+
+---
+
+# Relationship 生命周期
+
+```
+Create
+
+↓
+
+Understand
+
+↓
+
+Strengthen
+
+↓
+
+Decay
+
+↓
+
+Reconnect
+```
+
+关系不会永远不变。
+
+也不会突然消失。
+
+它像现实中的关系一样。
+
+会成长。
+
+会减弱。
+
+会再次建立。
+
+---
+
+# Graph Is Memory
+
+Object：
+
+记录事情。
+
+Relationship：
+
+记录意义。
+
+因此：
+
+Memory 并不是：
+
+时间轴。
+
+真正的 Memory：
+
+来自：
+
+Object + Relationship。
+
+---
+
+# Graph 与 Space
+
+Graph 不属于 Universe。
+
+Graph 存在于：
+
+所有 Space。
+
+只是：
+
+Universe。
+
+负责展示整个 Graph。
+
+---
+
+# 核心原则
+
+如果一个 Object 没有任何 Relationship。
+
+它只是：
+
+一份数据。
+
+当它开始连接。
+
+它才真正成为：
+
+世界的一部分。
+
+---
+
+# Relationship Graph 信条
+
+✓ Relationship 是一等公民。
+
+✓ 世界由关系组成。
+
+✓ Graph 高于 Tree。
+
+✓ Edge 拥有自己的生命周期。
+
+✓ AI 持续建立关系。
+
+✓ 所有关系都有语义。
+
+✓ 所有关系都有时间。
+
+✓ 所有关系都有强度。
+
+✓ Graph 持续成长。
+
+✓ Universe 就是一张 Living Graph。
+
+---
+
+# Part 2 完
+
+下一章节：
+
+## Part 3：Knowledge Graph Engine（知识图谱引擎）
+
+这一章将开始进入真正的 AI Native 架构。
+
+我们将定义：
+
+- Knowledge Graph 与 Relationship Graph 的区别
+- AI 如何持续理解整个世界
+- Embedding（向量）与 Graph 如何协同
+- RAG 为什么只是基础能力
+- Context Engine（上下文引擎）
+- Memory Engine（记忆引擎）
+- Semantic Search（语义搜索）
+- Time-aware Knowledge（时间感知知识）
+- Living Context（活上下文）
+- 为什么 OurVerse 的 AI 会随着用户一起成长，而不是每次都重新开始
