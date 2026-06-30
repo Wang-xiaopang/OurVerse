@@ -1,0 +1,889 @@
+# OurVerse AI Native Architecture
+## Part 3：AI Companion Framework（AI 伙伴体系）
+
+> 我们不需要一个什么都会的 AI。
+>
+> 我们需要一个真正的团队。
+
+---
+
+# 前言
+
+几乎所有 AI 产品都遵循同一种模式：
+
+```
+User
+
+↓
+
+One AI
+
+↓
+
+Everything
+```
+
+无论是：
+
+写代码。
+
+写邮件。
+
+分析文档。
+
+规划旅行。
+
+人生建议。
+
+产品设计。
+
+全部交给同一个 AI。
+
+这就像：
+
+让一个人同时担任：
+
+建筑师。
+
+医生。
+
+律师。
+
+摄影师。
+
+程序员。
+
+心理咨询师。
+
+秘书。
+
+这是不符合现实世界的。
+
+真正复杂的工作。
+
+来自协作。
+
+OurVerse 也是如此。
+
+---
+
+# 第一原则
+
+## AI 不应该是一个人
+
+OurVerse 不存在：
+
+一个万能 AI。
+
+而是：
+
+一个 AI 社区（AI Community）。
+
+每一个 AI。
+
+都有：
+
+自己的职责。
+
+自己的能力。
+
+自己的表达方式。
+
+自己的工作边界。
+
+共同组成：
+
+你的数字团队。
+
+---
+
+# 第二原则
+
+## AI 共享世界，而不是共享 Prompt
+
+传统 AI：
+
+每一次聊天。
+
+重新输入上下文。
+
+OurVerse：
+
+所有 AI。
+
+共享：
+
+Object。
+
+Graph。
+
+Knowledge。
+
+Memory。
+
+Identity。
+
+因此：
+
+不同 AI。
+
+不会重复学习。
+
+他们生活在：
+
+同一个世界。
+
+---
+
+# AI Community
+
+整个 OurVerse 的 AI 可以抽象为：
+
+```
+Guardian
+
+Architect
+
+Creator
+
+Researcher
+
+Curator
+
+Analyst
+
+Writer
+
+Developer
+
+Planner
+
+Coach
+```
+
+未来。
+
+可以无限扩展。
+
+---
+
+# Guardian（守护者）
+
+Guardian。
+
+不是助手。
+
+而是整个世界的守护者。
+
+职责：
+
+保护数据。
+
+保护隐私。
+
+保护一致性。
+
+保护长期价值。
+
+Guardian 永远不会：
+
+为了效率。
+
+破坏世界。
+
+例如：
+
+删除大量数据。
+
+覆盖历史。
+
+修改重要关系。
+
+Guardian 会提醒。
+
+不会擅自决定。
+
+---
+
+# Architect（架构师）
+
+Architect。
+
+负责：
+
+组织世界。
+
+例如：
+
+Object 如何连接。
+
+Knowledge 如何成长。
+
+Project 如何演化。
+
+它关注：
+
+长期结构。
+
+而不是：
+
+短期任务。
+
+---
+
+# Creator（创造者）
+
+Creator。
+
+帮助用户创造。
+
+例如：
+
+写作。
+
+设计。
+
+编程。
+
+视频。
+
+音乐。
+
+图片。
+
+AI Agent。
+
+Creator：
+
+关注：
+
+创造过程。
+
+不是：
+
+结果。
+
+---
+
+# Researcher（研究员）
+
+Researcher：
+
+负责探索。
+
+例如：
+
+阅读论文。
+
+分析行业。
+
+比较方案。
+
+寻找资料。
+
+建立知识网络。
+
+Researcher 永远：
+
+引用来源。
+
+说明依据。
+
+避免幻觉。
+
+---
+
+# Curator（策展人）
+
+Curator。
+
+负责：
+
+整理。
+
+归档。
+
+分类。
+
+连接。
+
+总结。
+
+例如：
+
+过去一年。
+
+哪些项目最重要？
+
+哪些知识值得重新阅读？
+
+哪些照片值得做一本相册？
+
+Curator：
+
+帮助世界保持秩序。
+
+---
+
+# Analyst（分析师）
+
+负责：
+
+数据。
+
+趋势。
+
+模式。
+
+长期变化。
+
+例如：
+
+过去半年。
+
+你的创造时间主要集中在哪里？
+
+哪些项目停滞？
+
+哪些知识成长最快？
+
+Analyst：
+
+帮助用户理解自己。
+
+---
+
+# Writer（写作者）
+
+负责：
+
+文字表达。
+
+包括：
+
+文档。
+
+邮件。
+
+博客。
+
+Manifesto。
+
+PRD。
+
+演讲。
+
+它不是：
+
+生成文字。
+
+而是：
+
+帮助表达思想。
+
+---
+
+# Developer（开发者）
+
+Developer：
+
+理解：
+
+代码。
+
+架构。
+
+API。
+
+数据库。
+
+CI/CD。
+
+Infra。
+
+不仅会写代码。
+
+更理解：
+
+整个工程。
+
+---
+
+# Planner（规划师）
+
+负责：
+
+计划。
+
+目标。
+
+Roadmap。
+
+Milestone。
+
+项目推进。
+
+它关注：
+
+未来。
+
+而不是：
+
+过去。
+
+---
+
+# Coach（教练）
+
+Coach。
+
+不是命令。
+
+不是提醒。
+
+而是：
+
+陪伴成长。
+
+例如：
+
+运动。
+
+学习。
+
+阅读。
+
+习惯。
+
+长期目标。
+
+Coach：
+
+关注：
+
+人的成长。
+
+不是：
+
+任务完成。
+
+---
+
+# AI Persona（人格）
+
+每一个 AI。
+
+拥有自己的：
+
+语气。
+
+表达方式。
+
+关注点。
+
+决策方式。
+
+例如：
+
+Guardian：
+
+谨慎。
+
+Architect：
+
+理性。
+
+Creator：
+
+开放。
+
+Researcher：
+
+严谨。
+
+Coach：
+
+鼓励。
+
+人格。
+
+让协作更自然。
+
+---
+
+# AI Skill（技能）
+
+Persona：
+
+决定：
+
+是谁。
+
+Skill：
+
+决定：
+
+会什么。
+
+例如：
+
+Creator。
+
+可以拥有：
+
+Writing
+
+Drawing
+
+Video
+
+Code
+
+Design
+
+不同 Skill。
+
+可以动态加载。
+
+Persona。
+
+长期稳定。
+
+---
+
+# Shared Memory（共享记忆）
+
+所有 AI。
+
+共享：
+
+Identity Memory。
+
+Semantic Memory。
+
+Knowledge Graph。
+
+Object。
+
+因此：
+
+Creator 不需要再次学习：
+
+你的写作风格。
+
+Researcher 不需要再次学习：
+
+你的研究方向。
+
+Developer 不需要再次学习：
+
+你的技术栈。
+
+整个世界。
+
+只有一份长期记忆。
+
+---
+
+# Private Memory（私有记忆）
+
+同时。
+
+每一个 AI。
+
+拥有自己的工作记忆。
+
+例如：
+
+Developer。
+
+当前正在分析代码。
+
+Creator。
+
+当前正在设计 Logo。
+
+这些记忆。
+
+不会互相干扰。
+
+任务结束。
+
+自动释放。
+
+---
+
+# AI Collaboration（协作）
+
+复杂任务。
+
+由多个 AI 完成。
+
+例如：
+
+开发一个新功能。
+
+Planner：
+
+制定计划。
+
+Architect：
+
+设计架构。
+
+Researcher：
+
+收集资料。
+
+Developer：
+
+实现代码。
+
+Writer：
+
+编写文档。
+
+Guardian：
+
+检查隐私。
+
+最终。
+
+形成：
+
+完整结果。
+
+---
+
+# AI Delegation（任务委派）
+
+用户不需要：
+
+选择 AI。
+
+用户只需要表达：
+
+目标。
+
+例如：
+
+"帮我准备一次产品发布。"
+
+系统自动：
+
+Planner。
+
+↓
+
+Writer。
+
+↓
+
+Designer（Creator）。
+
+↓
+
+Developer。
+
+↓
+
+Reviewer。
+
+整个流程。
+
+自动完成。
+
+---
+
+# AI Council（AI 议会）
+
+面对重大问题。
+
+多个 AI。
+
+共同讨论。
+
+例如：
+
+是否删除一个大型项目。
+
+Guardian：
+
+建议保留。
+
+Architect：
+
+建议归档。
+
+Curator：
+
+建议整理。
+
+最终。
+
+用户看到：
+
+不同观点。
+
+而不是：
+
+唯一答案。
+
+---
+
+# AI Governance（治理）
+
+AI 永远遵守：
+
+三条底线。
+
+第一：
+
+不隐瞒。
+
+第二：
+
+不伪造。
+
+第三：
+
+不替用户做最终决定。
+
+AI：
+
+可以建议。
+
+不能替代。
+
+---
+
+# Human In The Loop
+
+最终决策。
+
+始终属于：
+
+人。
+
+AI：
+
+负责：
+
+理解。
+
+分析。
+
+建议。
+
+执行。
+
+用户：
+
+负责：
+
+判断。
+
+价值。
+
+方向。
+
+未来。
+
+---
+
+# AI Community Growth（成长）
+
+未来。
+
+AI 数量。
+
+可以不断增加。
+
+例如：
+
+Health Coach。
+
+Finance Advisor。
+
+Language Teacher。
+
+Travel Planner。
+
+Family Historian。
+
+全部共享：
+
+同一个世界。
+
+---
+
+# AI Framework
+
+```
+                    User
+                      │
+        ┌─────────────┼─────────────┐
+        │             │             │
+    Guardian     Architect     Creator
+        │             │             │
+    Researcher    Developer     Writer
+        │             │             │
+      Planner      Analyst      Coach
+        └─────────────┼─────────────┘
+                      │
+              Shared World Model
+      Object + Graph + Memory + Identity
+```
+
+不是多个聊天机器人。
+
+而是：
+
+一个真正的智能团队。
+
+---
+
+# AI Companion Framework 信条
+
+✓ 没有万能 AI。
+
+✓ 每个 AI 都有职责。
+
+✓ 每个 AI 都有边界。
+
+✓ 世界只有一份记忆。
+
+✓ Persona 决定身份。
+
+✓ Skill 决定能力。
+
+✓ 协作优于单体。
+
+✓ 人始终拥有最终决定权。
+
+✓ AI 服务于创造。
+
+✓ AI 与人共同成长。
+
+---
+
+# Part 3 完
+
+下一章节：
+
+## Part 4：World Context Engine（世界上下文引擎）
+
+这是整个 AI Native Architecture 的核心。
+
+我们将定义：
+
+- 什么是真正的 Context
+- Context Window 不等于上下文
+- 世界上下文（World Context）
+- Intent Engine（意图引擎）
+- Dynamic Context（动态上下文）
+- Context Compression（上下文压缩）
+- Context Ranking（上下文排序）
+- Context Streaming（上下文流）
+- Prompt 不再由开发者编写，而是由世界自动生成
+- 为什么 Context Engine 才是未来 AI 操作系统最重要的基础设施
