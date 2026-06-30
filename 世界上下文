@@ -1,0 +1,801 @@
+# OurVerse AI Native Architecture
+## Part 4：世界上下文引擎（World Context Engine）
+
+> 大语言模型的上下文是有限的。
+>
+> 人的世界却是无限的。
+>
+> OurVerse 的任务，
+>
+> 不是把整个世界塞进 Context Window。
+>
+> 而是把真正重要的世界，
+> 在正确的时间，
+> 呈现给 AI。
+
+---
+
+# 前言
+
+过去两年。
+
+AI 产品一直在讨论：
+
+Context Window。
+
+32K。
+
+128K。
+
+1M。
+
+甚至更多。
+
+但这是一个错误的问题。
+
+真正的问题不是：
+
+AI 能看多少文字。
+
+而是：
+
+AI 应该看什么。
+
+OurVerse 不构建：
+
+Prompt Engineering。
+
+OurVerse 构建：
+
+Context Engineering。
+
+未来真正的竞争力。
+
+不是模型。
+
+不是 Prompt。
+
+而是：
+
+Context。
+
+---
+
+# 第一原则
+
+## Prompt 是结果
+
+Context 才是过程
+
+传统 AI：
+
+```
+User
+
+↓
+
+Prompt
+
+↓
+
+LLM
+```
+
+OurVerse：
+
+```
+World
+
+↓
+
+Context Engine
+
+↓
+
+Dynamic Prompt
+
+↓
+
+LLM
+```
+
+Prompt。
+
+不应该手写。
+
+Prompt。
+
+应该自动生成。
+
+---
+
+# 第二原则
+
+## 世界比聊天更重要
+
+AI 不应该只知道：
+
+上一轮聊天。
+
+AI 应该知道：
+
+你是谁。
+
+今天在做什么。
+
+最近关注什么。
+
+这个项目已经进行了多久。
+
+它与哪些知识相关。
+
+哪些人参与其中。
+
+哪些历史事件值得参考。
+
+因此：
+
+聊天只是世界中的一个对象。
+
+不是整个上下文。
+
+---
+
+# World Context（世界上下文）
+
+Context 不来源于聊天。
+
+而来源于：
+
+整个世界。
+
+```
+Object
+
++
+
+Relationship
+
++
+
+Memory
+
++
+
+Identity
+
++
+
+Timeline
+
++
+
+Space
+
++
+
+Intent
+```
+
+共同组成：
+
+World Context。
+
+---
+
+# Context Engine
+
+Context Engine 的职责：
+
+不是搜索。
+
+不是推理。
+
+而是：
+
+选择。
+
+任何一次 AI 调用之前。
+
+都会先经过：
+
+Context Engine。
+
+---
+
+# Context Pipeline
+
+```
+User Action
+
+↓
+
+Intent Detection
+
+↓
+
+Context Retrieval
+
+↓
+
+Ranking
+
+↓
+
+Compression
+
+↓
+
+Prompt Assembly
+
+↓
+
+LLM
+
+↓
+
+Response
+```
+
+模型。
+
+永远位于最后。
+
+---
+
+# Intent Engine（意图引擎）
+
+AI 首先理解：
+
+用户真正想做什么。
+
+例如：
+
+"帮我继续写 Design Bible。"
+
+真正意图不是：
+
+聊天。
+
+而是：
+
+继续一个长期项目。
+
+因此：
+
+Context Engine 自动加载：
+
+OurVerse。
+
+Design Bible。
+
+最近 Commit。
+
+设计原则。
+
+写作风格。
+
+相关知识。
+
+而不是：
+
+最近聊天记录。
+
+---
+
+# Context Layer（上下文层）
+
+整个 Context 分为五层。
+
+```
+Layer 5
+
+Identity
+
+↓
+
+Layer 4
+
+Long-term Memory
+
+↓
+
+Layer 3
+
+Current Project
+
+↓
+
+Layer 2
+
+Current Space
+
+↓
+
+Layer 1
+
+Current Interaction
+```
+
+越靠近用户。
+
+优先级越高。
+
+---
+
+# Layer 1
+
+## Interaction Context
+
+当前输入。
+
+当前页面。
+
+当前选中对象。
+
+当前光标。
+
+当前操作。
+
+生命周期：
+
+秒。
+
+---
+
+# Layer 2
+
+## Space Context
+
+当前空间。
+
+例如：
+
+Memory。
+
+Knowledge。
+
+Creation。
+
+不同 Space。
+
+AI 使用不同策略。
+
+---
+
+# Layer 3
+
+## Project Context
+
+如果用户正在：
+
+OurVerse。
+
+AI 自动加载：
+
+设计规范。
+
+对象模型。
+
+架构。
+
+Roadmap。
+
+不会加载：
+
+旅行记录。
+
+---
+
+# Layer 4
+
+## Long-term Memory
+
+长期知识。
+
+长期偏好。
+
+长期风格。
+
+长期目标。
+
+这些内容。
+
+不会因为聊天结束而消失。
+
+---
+
+# Layer 5
+
+## Identity Context
+
+最稳定的一层。
+
+包括：
+
+价值观。
+
+长期愿景。
+
+行为模式。
+
+创造理念。
+
+Identity：
+
+影响：
+
+所有 AI。
+
+所有 Agent。
+
+所有决策。
+
+---
+
+# Context Retrieval（上下文获取）
+
+不是全文搜索。
+
+而是：
+
+多源融合。
+
+来源包括：
+
+Knowledge Graph。
+
+Semantic Search。
+
+Memory。
+
+Timeline。
+
+Recent Activity。
+
+Space。
+
+Object。
+
+Project。
+
+共同组成：
+
+候选 Context。
+
+---
+
+# Context Ranking（排序）
+
+不是所有 Context 都重要。
+
+Context Engine 会计算：
+
+```
+Score
+
+=
+
+Relevance
+
+×
+
+Importance
+
+×
+
+Recency
+
+×
+
+Relationship
+
+×
+
+Intent Match
+```
+
+得分越高。
+
+越优先进入 Prompt。
+
+---
+
+# Context Compression（压缩）
+
+世界无限。
+
+Context Window 有限。
+
+因此：
+
+Context Engine 必须压缩。
+
+例如：
+
+一百篇笔记。
+
+不会全部发送。
+
+而生成：
+
+一份总结。
+
+十个关键对象。
+
+三个重要关系。
+
+两个待确认问题。
+
+压缩。
+
+不是删除。
+
+而是：
+
+保持意义。
+
+---
+
+# Context Streaming（上下文流）
+
+AI 不需要：
+
+一次拿到所有 Context。
+
+可以：
+
+边思考。
+
+边获取。
+
+例如：
+
+第一次回答。
+
+使用基础 Context。
+
+如果继续深入。
+
+Context Engine：
+
+继续加载：
+
+更多相关世界。
+
+这就是：
+
+Streaming Context。
+
+---
+
+# Context Lifetime（生命周期）
+
+不同 Context。
+
+存在时间不同。
+
+例如：
+
+当前选中文本。
+
+一分钟。
+
+当前项目。
+
+两个月。
+
+长期目标。
+
+五年。
+
+Identity。
+
+几十年。
+
+Context。
+
+不是静态变量。
+
+而是：
+
+活系统。
+
+---
+
+# Context Isolation（上下文隔离）
+
+不同任务。
+
+互不污染。
+
+例如：
+
+工作。
+
+家庭。
+
+健康。
+
+学习。
+
+拥有：
+
+独立 Context。
+
+AI 不会：
+
+错误引用。
+
+保持：
+
+世界边界。
+
+---
+
+# Context Privacy（隐私）
+
+Context 默认：
+
+最小原则。
+
+AI 永远只获取：
+
+完成任务需要的信息。
+
+而不是：
+
+整个数据库。
+
+用户拥有：
+
+最终控制权。
+
+---
+
+# Context Evolution（演化）
+
+随着世界成长。
+
+Context Engine：
+
+越来越准确。
+
+越来越少依赖：
+
+聊天。
+
+越来越依赖：
+
+理解。
+
+未来：
+
+用户甚至不需要解释：
+
+"OurVerse。"
+
+AI 已经知道：
+
+整个项目。
+
+---
+
+# Prompt Assembly（Prompt 生成）
+
+开发者。
+
+不再手写 Prompt。
+
+Prompt 由：
+
+Context Engine。
+
+动态生成。
+
+例如：
+
+```
+System
+
++
+
+Identity
+
++
+
+Project
+
++
+
+Current Task
+
++
+
+Relevant Objects
+
++
+
+Knowledge
+
++
+
+Memory
+
+↓
+
+Prompt
+```
+
+Prompt：
+
+只是世界的快照。
+
+---
+
+# World Context
+
+最终。
+
+AI 不回答：
+
+一句话。
+
+AI 回答：
+
+整个世界。
+
+因为：
+
+它真正理解：
+
+世界。
+
+---
+
+# World Context Engine 信条
+
+✓ Prompt 来自世界。
+
+✓ Context 高于 Prompt。
+
+✓ Intent 决定 Context。
+
+✓ Context 决定智能。
+
+✓ 世界不是聊天历史。
+
+✓ Context 是动态的。
+
+✓ Context 可以压缩。
+
+✓ Context 可以成长。
+
+✓ AI 理解的是生活。
+
+✓ 世界才是真正的大模型。
+
+---
+
+# Part 4 完
+
+下一章节：
+
+## Part 5：Agent Runtime（智能体运行时）
+
+这是 AI Native Architecture 的执行层，也是未来整个 OurVerse 的智能内核。
+
+我们将定义：
+
+- Agent Runtime 生命周期
+- Tool Registry（工具注册中心）
+- Capability Model（能力模型）
+- Agent Sandbox（隔离运行）
+- Event Bus（事件总线）
+- Task Scheduler（任务调度）
+- Agent Collaboration Protocol（智能体协作协议）
+- Background Agent（后台智能体）
+- Long-running Task（长任务）
+- Human Approval（人工确认机制）
+
+届时，OurVerse 将完成从 **世界模型 → 记忆模型 → 上下文模型 → 智能执行模型** 的完整闭环，真正具备一个 **Personal Digital OS** 的 AI 基础设施。````
