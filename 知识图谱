@@ -1,0 +1,822 @@
+# OurVerse AI Native Architecture
+## Part 1：Knowledge Graph Engine（知识图谱引擎）
+
+> AI 不应该只会回答问题。
+>
+> AI 应该理解你的世界。
+
+---
+
+# 前言
+
+过去几年，大多数 AI 产品都围绕一个核心展开：
+
+**Chat（聊天）。**
+
+用户输入一句话。
+
+AI 返回一句话。
+
+整个交互到此结束。
+
+下一次聊天。
+
+AI 又重新开始。
+
+这种模式，本质上仍然是：
+
+**一次性的问答系统（Stateless AI）。**
+
+OurVerse 希望构建的是另一种 AI。
+
+它不是聊天机器人。
+
+而是数字家园里的长期居民。
+
+因此，它必须拥有：
+
+- 持续理解
+- 持续记忆
+- 持续学习
+- 持续连接
+
+AI 的价值，不来自模型本身。
+
+而来自：
+
+它是否真正理解你的世界。
+
+---
+
+# 第一原则
+
+## AI 的核心不是模型，而是上下文（Context）
+
+今天的大多数 AI 产品：
+
+```
+Question
+
+↓
+
+LLM
+
+↓
+
+Answer
+```
+
+OurVerse：
+
+```
+World
+
+↓
+
+Context
+
+↓
+
+LLM
+
+↓
+
+Action
+
+↓
+
+World
+```
+
+模型只是推理器（Reasoner）。
+
+真正重要的是：
+
+Context。
+
+没有 Context。
+
+AI 只能回答常识。
+
+拥有 Context。
+
+AI 才能理解你。
+
+---
+
+# 第二原则
+
+## Knowledge Graph 是 AI 的长期记忆
+
+传统聊天：
+
+```
+聊天记录
+
+↓
+
+历史上下文
+
+↓
+
+结束
+```
+
+OurVerse：
+
+```
+Object
+
+↓
+
+Relationship
+
+↓
+
+Knowledge Graph
+
+↓
+
+持续成长
+```
+
+聊天不是记忆。
+
+Graph 才是记忆。
+
+---
+
+# 第三原则
+
+## Knowledge Graph ≠ Relationship Graph
+
+Relationship Graph：
+
+描述连接。
+
+例如：
+
+```
+Photo
+
+↓
+
+taken_at
+
+↓
+
+Tokyo
+```
+
+Knowledge Graph：
+
+描述理解。
+
+例如：
+
+```
+Tokyo
+
+↓
+
+is_part_of
+
+↓
+
+Japan
+
+↓
+
+travel_interest
+
+↓
+
+User
+```
+
+Graph 不只是：
+
+知道连接。
+
+而是：
+
+知道意义。
+
+---
+
+# AI 理解流程
+
+任何进入 OurVerse 的内容。
+
+都会经过统一理解流程。
+
+```
+Import
+
+↓
+
+Parse
+
+↓
+
+Extract
+
+↓
+
+Understand
+
+↓
+
+Embed
+
+↓
+
+Connect
+
+↓
+
+Summarize
+
+↓
+
+Store
+```
+
+用户无需手动整理。
+
+AI 自动完成。
+
+---
+
+# Parse（解析）
+
+AI 首先识别内容。
+
+例如：
+
+PDF。
+
+Markdown。
+
+图片。
+
+视频。
+
+网页。
+
+聊天。
+
+音频。
+
+代码。
+
+不同格式。
+
+统一解析。
+
+---
+
+# Extract（抽取）
+
+AI 提取：
+
+人物。
+
+地点。
+
+时间。
+
+组织。
+
+关键词。
+
+事件。
+
+引用。
+
+主题。
+
+情绪。
+
+任务。
+
+问题。
+
+全部转换成结构化信息。
+
+---
+
+# Understand（理解）
+
+AI 不仅抽取。
+
+还进行理解。
+
+例如：
+
+一本书。
+
+AI 会理解：
+
+主题。
+
+作者观点。
+
+核心思想。
+
+与你已有知识的关系。
+
+与你项目的关联。
+
+与你兴趣的联系。
+
+理解。
+
+比识别更重要。
+
+---
+
+# Embed（向量化）
+
+所有 Object。
+
+都会生成 Embedding。
+
+Embedding 不负责保存知识。
+
+Embedding 负责：
+
+计算相似性。
+
+例如：
+
+这篇文章。
+
+与你三年前写的一篇笔记。
+
+高度相似。
+
+Graph：
+
+负责关系。
+
+Embedding：
+
+负责距离。
+
+两者共同工作。
+
+---
+
+# Connect（连接）
+
+AI 自动寻找：
+
+可能关系。
+
+例如：
+
+今天新增：
+
+《设计中的设计》。
+
+AI 自动发现：
+
+与你：
+
+Apple。
+
+Jony Ive。
+
+极简主义。
+
+OurVerse。
+
+设计原则。
+
+全部相关。
+
+建立候选连接。
+
+等待确认。
+
+---
+
+# Summarize（总结）
+
+每一个 Object。
+
+都会生成：
+
+一句话摘要。
+
+一段摘要。
+
+关键词。
+
+阅读建议。
+
+关联对象。
+
+未来行动。
+
+这些摘要。
+
+持续更新。
+
+而不是一次生成。
+
+---
+
+# Store（存储）
+
+最终。
+
+AI 不保存聊天。
+
+AI 保存：
+
+理解结果。
+
+Knowledge Graph。
+
+Context。
+
+Embedding。
+
+Graph。
+
+Object。
+
+共同组成：
+
+长期知识。
+
+---
+
+# Context Engine
+
+Context 是 AI 的真正输入。
+
+Context 不只是：
+
+聊天记录。
+
+Context 包括：
+
+当前项目。
+
+当前位置。
+
+最近工作。
+
+相关人物。
+
+相关知识。
+
+近期目标。
+
+历史行为。
+
+时间。
+
+空间。
+
+Graph。
+
+用户偏好。
+
+所有这些。
+
+共同组成：
+
+Living Context。
+
+---
+
+# Living Context（活上下文）
+
+上下文不是固定窗口。
+
+而是：
+
+不断变化。
+
+例如：
+
+上午。
+
+你在写文档。
+
+AI 自动关注：
+
+设计。
+
+下午。
+
+你开始旅行。
+
+AI 自动关注：
+
+地点。
+
+天气。
+
+照片。
+
+Context。
+
+永远围绕：
+
+当前生活。
+
+动态变化。
+
+---
+
+# Multi-layer Context（多层上下文）
+
+AI 获取上下文。
+
+不是一次完成。
+
+而是多层筛选。
+
+```
+Global Context
+
+↓
+
+Space Context
+
+↓
+
+Project Context
+
+↓
+
+Conversation Context
+
+↓
+
+Current Intent
+```
+
+最终。
+
+形成最合适的 Prompt。
+
+而不是：
+
+整个数据库。
+
+---
+
+# Time-aware Knowledge（时间感知知识）
+
+知识会变化。
+
+例如：
+
+你：
+
+曾经在北京。
+
+现在在新加坡。
+
+未来可能搬家。
+
+AI 不应该：
+
+覆盖。
+
+而应该：
+
+理解时间。
+
+知识永远带有：
+
+时间维度。
+
+---
+
+# Semantic Search
+
+未来。
+
+搜索不是：
+
+关键词。
+
+而是：
+
+意义。
+
+例如：
+
+"帮我找去年冬天让我重新思考产品设计的一本书。"
+
+AI 查询：
+
+冬天。
+
+去年。
+
+设计。
+
+影响。
+
+阅读。
+
+全部组合。
+
+而不是：
+
+字符串匹配。
+
+---
+
+# Memory Engine
+
+Memory Engine：
+
+负责：
+
+长期记忆。
+
+短期记忆。
+
+工作记忆。
+
+情景记忆。
+
+AI 不会无限记住所有内容。
+
+而是：
+
+像人一样。
+
+形成记忆系统。
+
+---
+
+# AI 不重新开始
+
+今天的大模型。
+
+每一次聊天。
+
+都像：
+
+第一次见面。
+
+OurVerse：
+
+不会。
+
+因为：
+
+AI 认识：
+
+你的世界。
+
+不是因为：
+
+聊天历史。
+
+而是因为：
+
+Knowledge Graph。
+
+---
+
+# AI 成长模型
+
+```
+Import
+
+↓
+
+Understand
+
+↓
+
+Connect
+
+↓
+
+Remember
+
+↓
+
+Reflect
+
+↓
+
+Recommend
+
+↓
+
+Grow
+```
+
+AI 每天都在成长。
+
+不是每天都在重置。
+
+---
+
+# AI 与 Object
+
+Object：
+
+保存事实。
+
+Graph：
+
+保存关系。
+
+Embedding：
+
+保存语义距离。
+
+Context：
+
+保存当前状态。
+
+AI：
+
+负责理解。
+
+整个系统。
+
+共同构成：
+
+AI Native Architecture。
+
+---
+
+# AI Native 原则
+
+我们不是：
+
+在产品里加入 AI。
+
+我们是：
+
+围绕 AI 重新设计产品。
+
+因此：
+
+AI 不是一个功能。
+
+AI 是整个世界的理解层（Understanding Layer）。
+
+---
+
+# Knowledge Graph Engine 信条
+
+✓ AI 理解世界，而不是回答问题。
+
+✓ Graph 保存知识。
+
+✓ Embedding 保存相似性。
+
+✓ Context 决定智能。
+
+✓ Memory 决定长期价值。
+
+✓ Object 决定事实。
+
+✓ Relationship 决定意义。
+
+✓ Time 决定演化。
+
+✓ AI 持续成长。
+
+✓ 用户与 AI 共同成长。
+
+---
+
+# Part 1 完
+
+下一章节：
+
+## Part 2：Memory Engine（记忆引擎）
+
+这是整个 OurVerse AI 架构中最关键的一章。
+
+我们将正式定义 AI 的四层记忆体系：
+
+- Working Memory（工作记忆）
+- Episodic Memory（情景记忆）
+- Semantic Memory（语义记忆）
+- Identity Memory（身份记忆）
+
+并进一步定义：
+
+- AI 如何遗忘
+- AI 如何强化记忆
+- AI 如何形成长期人格
+- AI 如何避免上下文无限膨胀
+- 为什么 OurVerse 不会拥有一个 AI，而是拥有一个真正与你共同成长的数字伙伴
